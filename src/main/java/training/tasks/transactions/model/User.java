@@ -1,6 +1,5 @@
 package training.tasks.transactions.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import training.tasks.transactions.model.dto.UserDto;

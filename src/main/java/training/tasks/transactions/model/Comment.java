@@ -7,6 +7,8 @@ import training.tasks.transactions.model.dto.PostDto;
 import training.tasks.transactions.model.dto.UserDto;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Data
@@ -16,12 +18,17 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty
     private String content;
     @ManyToOne
+    @NotNull
     private User author;
     @ManyToOne
+    @NotNull
     private Post post;
+    @NotNull
     private Integer likes;
+    @NotNull
     private LocalDateTime commented;
 
     public Comment(String content, User author, Post post, Integer likes, LocalDateTime commented) {

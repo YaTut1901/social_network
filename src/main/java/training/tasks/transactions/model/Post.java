@@ -8,6 +8,7 @@ import training.tasks.transactions.model.dto.UserDto;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,13 +23,13 @@ public class Post {
     @NotEmpty
     private String content;
     @ManyToOne
-    @NotEmpty
+    @NotNull
     private User author;
-    @NotEmpty
+    @NotNull
     private Integer likes;
     @OneToMany
     private List<Comment> comments;
-    @NotEmpty
+    @NotNull
     private LocalDateTime posted;
 
     public Post(String content, User author, Integer likes, LocalDateTime posted) {
