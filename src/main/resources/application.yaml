@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: test
+  jpa:
+    show-sql: true
+  datasource:
+    username: social_network
+    password: 1234
+logging:
+  level:
+    ROOT: INFO
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
+        transaction: DEBUG
+      hibernate:
+        engine:
+          transaction:
+            internal:
+              TransactionImpl: DEBUG
+blacklist:
+  enabled: true
+  path: src/main/resources/blacklist.txt
