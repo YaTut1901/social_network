@@ -1,6 +1,6 @@
 #!/bin/bash
 NETWORK=transactions-network
-MYSQL_ALIAS=mysql
+MYSQL_ALIAS=mysql sasd
 MYSQL_PASSWORD=1234
 DATABASE=mysql
 MYSQL_IMAGE=mysql:5.7
