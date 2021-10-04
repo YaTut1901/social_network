@@ -1,5 +1,5 @@
 #!/bin/bash
-NETWORK=transactions-network 1
+NETWORK=transactions-network
 MYSQL_ALIAS=mysql 
 MYSQL_PASSWORD=1234
 DATABASE=mysql
