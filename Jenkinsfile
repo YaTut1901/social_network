@@ -12,10 +12,5 @@ pipeline {
         sh "mvn -version"
       }
     }
-    stage("Build") {
-      steps {
-        sh "mvn clean install"
-      }
-    }
   }
 }
