@@ -12,5 +12,23 @@ pipeline {
         sh "mvn -version"
       }
     }
+    
+    stage("Build") {
+      steps{
+        sh "mvn clean package -DskipTests"
+      }
+    }
+    
+    stage("Test") {
+      steps{
+        sh "mvn clean install"
+      }
+    }
+  }
+  
+  post {
+    always {
+      cleanWs()
+    }
   }
 }
