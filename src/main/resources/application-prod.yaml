@@ -3,4 +3,4 @@ spring:
     url: jdbc:mysql://mysql:3306/social_network_db?serverTimezone=UTC
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
